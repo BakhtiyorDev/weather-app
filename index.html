@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weather app</title>
+    <!-- font awesome -->
+    <link rel="stylesheet" href="css/font-awesome.css" />
+    <!-- fonts css -->
+    <link rel="stylesheet" href="fonts/fonts.css" />
+    <!-- favicon -->
+    <link rel="icon" href="img/weather-icon.jpg" />
+    <!-- main css -->
+    <link rel="stylesheet" href="css/main.css" />
+  </head>
+  <body>
+    
+    <!-- weather start -->
+    <section class="weather" id="weather">
+      <div class="container">
+        <i class="weather__bars far fa-bars" id="weatherBars"></i>
+        <a href="#" class="weather__logo">Weather app</a>
+        <!-- weather temperature -->
+        <div class="weather__temp--box">
+          <span class="weather__temp" id="weather-temp">20</span>
+          <div class="weather__city--details" id="weather-temp">
+            <p class="weather__city--current" id="weather-city">Tashkent</p>
+            <span class="weather__city--time" id="weather-time"
+              >2021-09-27 21:30</span
+            >
+          </div>
+          <div class="weather__types">
+            <img src="#" alt="" id="weather-icon">
+            <span id="weather-state">loading</span>
+          </div>
+        </div>
+        <!-- weather temperature -->
+
+        <!-- weather details -->
+        <div class="weather__info" id="weatherInfo">
+          <div class="weather__search">
+              <form id="weather__search--form">
+                <input
+                type="text"
+                placeholder="Another location"
+                id="searchCity"
+              />
+              <button id="changeCity"">
+                <i class="search-icon far fa-search"></i>
+              </button>
+            </form>
+          </div>
+          <div class="weather__cities">
+            <button class="weather__city" data-value="tashkent"> 
+              tashkent
+            </button>
+            <button class="weather__city" data-value="new york">
+              new york
+            </button>
+            <button class="weather__city" data-value="london">london</button>
+            <button class="weather__city" data-value="dubai">dubai</button>
+          </div>
+          <div class="weather__details">
+            <h4 class="weather__subtitle">weather details</h4>
+            <div class="weather__city--info">
+              <span class="weather__wind">wind speed</span>
+              <span class="weather__wind--km" id="weather-wind">loading</span>
+            </div>
+            <div class="weather__city--info">
+              <span class="weather__humidity">humidity</span>
+              <span class="weather__humidity--percent" id="weather-humidity"
+                >loading
+              </span>
+            </div>
+            <div class="weather__city--info">
+              <span class="weather__visibility">visibility</span>
+              <span class="weather__visibility--km" id="weather-visibility"
+                >loading
+              </span>
+            </div>
+          </div>
+        </div>
+        <!-- weather details -->
+      </div>
+    </section>
+    <!-- weather start -->
+    <script src="js/main.js"></script>
+  </body>
+</html>

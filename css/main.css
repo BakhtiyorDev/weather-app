@@ -1,0 +1,276 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  text-transform: capitalize !important;
+  font-family: "Poppins";
+  text-decoration: none;
+  color: #ffffff;
+  letter-spacing: 1px;
+}
+
+button,
+input,
+input:focus {
+  border: none;
+  outline: none;
+  background: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+::placeholder {
+  color: #bebebe;
+}
+
+.container {
+  max-width: 1340px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.weather {
+  position: relative;
+  overflow: hidden;
+  padding: 70px 0;
+  height: 100vh;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.weather::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.274);
+}
+
+.weather__bars {
+  cursor: pointer;
+  display: none;
+}
+
+.weather__logo {
+  position: absolute;
+  font-size: 18px;
+  z-index: 2;
+  left: 50px;
+}
+
+.weather__temp--box {
+  border-radius: 15px;
+  padding: 0 15px;
+  position: absolute;
+  z-index: 2;
+  bottom: 70px;
+  left: 50px;
+  display: flex;
+  align-items: center;
+  background-image: linear-gradient(to top, #00000098, #ffffff00);
+}
+
+.weather__temp {
+  font-size: 110px;
+  margin-right: 40px;
+}
+
+.weather__temp::after {
+  content: "";
+  border: 5px solid #ffffff;
+  position: absolute;
+  border-radius: 50px;
+  width: 20px;
+  height: 20px;
+}
+
+.weather__city--current {
+  font-size: 60px;
+  margin-right: 20px;
+  line-height: 45px;
+  margin-bottom: 20px;
+}
+
+.weather__city--time {
+  margin-left: 10px;
+}
+
+.weather__types {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#weather-state {
+  position: relative;
+  bottom: 18px;
+}
+
+#weather-icon {
+  width: 85px;
+  margin-bottom: 15px;
+}
+
+.weather-type {
+  font-size: 48px;
+  margin-bottom: 2px;
+}
+
+.weather__info {
+  position: absolute;
+  z-index: 2;
+  right: 0;
+  top: 0;
+  width: 30%;
+  padding: 30px;
+  height: 100%;
+  backdrop-filter: blur(13px);
+  background: #16161681;
+}
+
+.weather__info.open-bars {
+  right: 0;
+  overflow-y: auto;
+}
+
+.weather__search {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+#weather__search--form {
+  height: 35px;
+}
+
+#searchCity {
+  background: transparent;
+  font-size: 17px;
+  padding: 5px 0;
+}
+
+.search-icon {
+  font-size: 18px;
+  position: absolute;
+  top: 10px;
+  right: 0;
+}
+
+.weather__cities {
+  display: flex;
+  padding: 40px 0;
+  flex-direction: column;
+  border-top: 2px solid #808080;
+}
+
+.weather__city,
+.weather__city--info span {
+  width: fit-content;
+  transition: 0.3s;
+  margin: 7px 0;
+  color: #bebebe;
+  font-size: 17px;
+}
+
+.weather__city--info span {
+  color: #ffffff;
+  text-transform: lowercase;
+}
+
+.weather__city:hover {
+  color: #ffffff;
+}
+
+.weather__details {
+  padding: 40px 0;
+  border-top: 2px solid #808080;
+  border-bottom: 2px solid #808080;
+}
+
+.weather__subtitle {
+  margin-bottom: 20px;
+  font-weight: 500;
+}
+
+.weather__city--info {
+  display: flex;
+  justify-content: space-between;
+}
+
+@media screen and (max-width: 992px) {
+  .weather__info {
+    right: -450px;
+  }
+  .weather__bars {
+    z-index: 99;
+    display: block;
+    position: absolute;
+    right: 28px;
+    font-size: 30px;
+    color: #cccccc;
+    background: #2f2f2f;
+    padding: 5px;
+    border-radius: 5px;
+  }
+}
+
+@media screen and (max-width: 898px) {
+  .weather__city,
+  .weather__city--info span,
+  #searchCity {
+    font-size: 15px;
+  }
+  .weather__temp--box {
+    display: block;
+    bottom: 22px;
+    text-align: center;
+    padding: 28px;
+  }
+  .weather__temp {
+    margin: 0;
+    font-size: 90px;
+  }
+  .weather__city--current {
+    font-size: 48px;
+    margin-bottom: 20px;
+    margin-right: 0;
+  }
+  .weather__info {
+    width: 45%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .weather__info {
+    width: 47%;
+  }
+  .weather__temp--box {
+    padding: 10px;
+  }
+  .weather__city--current {
+    font-size: 45px;
+  }
+}
+
+@media screen and (max-width: 580px) {
+  .weather__info {
+    width: 47%;
+  }
+}
+
+@media screen and (max-width: 574px) {
+  .weather__info {
+    width: 100%;
+    right: -600px;
+  }
+  .weather__temp--box {
+    position: relative;
+    bottom: -156px;
+    left: 0;
+  }
+}
