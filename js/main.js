@@ -75,7 +75,7 @@ const searchCity = () => {
 
 const getNightTime = (time) => {
   const timeSlice = time.slice(10, 13);
-  if (timeSlice < 05) {
+  if (timeSlice < 05 || timeSlice > 17) {
     weatherIcon.src = "img/night.svg";
     weather.style.backgroundImage = `url('img/night.jpg')`;
   }
